@@ -36,7 +36,8 @@ class PagesController extends Controller
 
     public function edit(Page $page)
     {
-        return view('pages.edit', compact('page'));
+        $stylesheets = Array();
+        return view('pages.edit', compact('page'), compact('stylesheets'));
     }
 
     public function show(Page $page){
